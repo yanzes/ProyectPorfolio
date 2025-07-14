@@ -1,57 +1,75 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <title>Mi Portafolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Yanzes | Ingeniero de Datos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div id="navbar">
-        <a href="#welcome-section">Bienvenidos</a>
-        <a href="#projects">Proyectos</a>
-        <a href="https://github.com/yanzes" target="_blank">GitHub</a>
-    </div>
+    <header class="hero">
+        <div class="hero-content">
+            <img src="https://avatars.githubusercontent.com/u/66862377?v=4" alt="Perfil de Yanzes" class="profile-pic"/>
+            <div>
+                <h1>¡Hola! Soy <span>Yanzes</span></h1>
+                <p>Ingeniero de Datos | ETL | Data Warehousing | Cloud</p>
+                <a href="#projects" class="cta-button">Explora mis proyectos</a>
+            </div>
+        </div>
+    </header>
 
-    <section id="welcome-section">
-        
-        <div class="info">
-            <h1>Acerca de mí</h1>
-            <p>Como programador con experiencia en el manejo de bases de datos, mejora de procesos internos, desarrollo web y modelamiento de datos utilizando Python, así como en Big Data, puedo analizar grandes cantidades de información y proporcionar soluciones personalizadas para cada caso.</p>
-            <p>Además, mi conocimiento en metodologías ágiles, Scrum y manejo de equipos asegura la entrega efectiva de resultados. Como profesional en Data Science, desarrolló soluciones inteligentes y eficientes para el manejo y análisis de datos.</p>
-            <p>Gracias a mis habilidades, puedo ofrecer soluciones eficaces y adaptadas a las necesidades específicas de cada empresa.</p>
-          </div>
-      
-        <br>
-        <br>
+    <nav id="navbar">
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="about">
+        <h2>📌 Sobre mí</h2>
+        <p>Ingeniero de Datos con sólida experiencia en diseño de pipelines, integración de datos, automatización de procesos y soluciones en la nube. Mi enfoque está en estructurar datos para el análisis estratégico, implementando soluciones robustas y escalables en entornos distribuidos.</p>
     </section>
 
     <section id="projects">
-        <div class="project-tile">
-            <h2>Analisis de ventas</h2>
-            <p>Realizo el analisis de informacion en python.</p>
-            <p>Análisis de 1 Acción vs. SPX usando diferentes Medidas:</p>
-            <h3>Análisis de Datos Financieros</h3>
-
-            <ul>
-                <li>Gráficas de Precios y Medias Móviles</li>
-                <li>Estadística Descriptiva del Precio</li>
-                <li>Retornos: Simple, Logarítmico y Acumulado</li>
-                <li>Histograma (Distribución) y Box Plot de Retornos Diarios</li>
-                <li>Regresión Linear Simple</li>
-                <li>Precios Promedio</li>
-                <li>Precios Máximos y Mínimos</li>
-                <li>Análisis de Volumen</li>
-                <li>Importe Total Operado</li>
-            </ul>
-           <a href="https://colab.research.google.com/drive/1Usl2lxoL9uQM15AYWK8_f7GrFNQpL_19?usp=sharing" target="_blank">Enlace al Proyecto</a>
+        <h2>📊 Proyectos Destacados</h2>
+        <div class="projects-row">
+            <div class="project-card">
+                <h3>Análisis Financiero</h3>
+                <p>Comparación de retornos frente al S&P 500 con visualizaciones y estadísticas.</p>
+                <a href="https://colab.research.google.com/drive/1Usl2lxoL9uQM15AYWK8_f7GrFNQpL_19" target="_blank">Ver Proyecto</a>
+            </div>
+            <div class="project-card">
+                <h3>Pipeline ETL Cloud</h3>
+                <p>Automatización de carga desde CSV a Snowflake usando Airflow y AWS.</p>
+                <a href="#" target="_blank">Repositorio privado</a>
+            </div>
+            <div class="project-card">
+                <h3>Dashboard KPIs</h3>
+                <p>Indicadores clave con Power BI desde múltiples fuentes automatizadas.</p>
+                <a href="#" target="_blank">Demo disponible</a>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <a id="profile-link" href="https://github.com/yanzes" target="_blank">Mi GitHub</a>
+    <section id="skills">
+        <h2>🧠 Habilidades Clave</h2>
+        <div class="skills-grid">
+            <span>SQL Avanzado</span><span>Python</span><span>Apache Airflow</span>
+            <span>ETL/ELT Pipelines</span><span>Docker</span><span>Data Warehousing</span>
+            <span>AWS / GCP</span><span>Snowflake / BigQuery</span>
+            <span>Git / CI-CD</span><span>Power BI / Tableau</span>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <h2>📫 Contacto</h2>
+        <ul class="contact-list">
+            <li><strong>Email:</strong> yanzes@example.com</li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yanzesdevdata" target="_blank">linkedin.com/in/yanzesdevdata</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/yanzes" target="_blank">github.com/yanzes</a></li>
+        </ul>
+        <p>&copy; 2025 Yanzes DevData</p>
     </footer>
 
     <script src="script.js"></script>
