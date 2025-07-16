@@ -3,69 +3,176 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Portafolio profesional de Yanzes, ingeniero de datos especializado en ETL, nube, visualización y análisis.">
+    <meta name="keywords" content="Ingeniero de datos, Data Engineer, ETL, Big Data, Python, Yanzes, Portafolio">
+    <meta name="author" content="Yanzes DevData">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Yanzes | Ingeniero de Datos</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<div class="controls">
+    <!-- Toggle de idioma tipo switch -->
+<div class="language-toggle-container">
+  <span class="lang-label">Español</span>
+  <div class="toggle-switch">
+    <input type="checkbox" id="lang-switch">
+    <label for="lang-switch" class="switch-label"></label>
+  </div>
+  <span class="lang-label">English</span>
+</div>
+
+</div>
+
     <header class="hero">
         <div class="hero-content">
-            <img src="https://avatars.githubusercontent.com/u/66862377?v=4" alt="Perfil de Yanzes" class="profile-pic"/>
+            <img src="sources/perfil.jpg" alt="Perfil de Yanzes" class="profile-pic"/>
             <div>
-                <h1>¡Hola! Soy <span>Yanzes</span></h1>
-                <p>Ingeniero de Datos | ETL | Data Warehousing | Cloud</p>
-                <a href="#projects" class="cta-button">Explora mis proyectos</a>
+                <h1 class="lang" data-es="¡Hola! Soy Yanzes" data-en="Hello! I am Yanzes">¡Hola! Soy Yanzes</h1>
+                <p class="lang" data-es="Ingeniero de Datos | ETL | Almacenamiento | Nube" data-en="Data Engineer | ETL | Warehousing | Cloud">Ingeniero de Datos | ETL | Almacenamiento | Nube</p>
+                <a href="#projects" class="cta-button lang" data-es="Explora mis proyectos" data-en="View My Projects">Explora mis proyectos</a>
             </div>
         </div>
     </header>
 
     <nav id="navbar">
-        <a href="#about">Sobre mí</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#about" class="lang" data-es="Sobre mí" data-en="About Me">Sobre mí</a>
+        <a href="#projects" class="lang" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <a href="#skills" class="lang" data-es="Habilidades" data-en="Skills">Habilidades</a>
+        <a href="#contacto" class="lang" data-es="Contacto" data-en="Contact">Contacto</a>
     </nav>
 
-    <section id="about">
-        <h2>📌 Sobre mí</h2>
-        <p>Ingeniero de Datos con sólida experiencia en diseño de pipelines, integración de datos, automatización de procesos y soluciones en la nube. Mi enfoque está en estructurar datos para el análisis estratégico, implementando soluciones robustas y escalables en entornos distribuidos.</p>
-    </section>
+<section id="about">
+  <h2 class="lang" data-es="📌 Sobre mí" data-en="📌 About Me">📌 Sobre mí</h2>
+  <p class="lang"
+     data-es="Soy Ingeniero de Datos con sólida experiencia en el diseño, desarrollo y mantenimiento de pipelines de datos escalables y automatizados.<br><br>
+He trabajado integrando fuentes de datos heterogéneas, modelando estructuras para data warehouses y optimizando procesos ETL/ELT en entornos cloud como AWS y GCP.<br><br>
+Además, tengo conocimientos en orquestación de flujos de trabajo con Apache Airflow, almacenamiento en Snowflake y visualización de KPIs mediante herramientas como Power BI y Tableau.<br><br>
+Mi enfoque está en construir soluciones de datos robustas, seguras y eficientes que habiliten la toma de decisiones basada en información confiable.<br><br>
+Trabajo con metodologías ágiles, entregando valor continuamente en proyectos de analítica avanzada, automatización y modernización de la arquitectura de datos."
+     
+     data-en="I am a Data Engineer with solid experience in designing, developing, and maintaining scalable and automated data pipelines.<br><br>
+I specialize in integrating heterogeneous data sources, modeling data warehouse structures, and optimizing ETL/ELT workflows in cloud environments such as AWS and GCP.<br><br>
+I have hands-on expertise in orchestrating workflows using Apache Airflow, managing cloud data with Snowflake, and building interactive KPI dashboards with tools like Power BI and Tableau.<br><br>
+My focus is on building robust, secure, and efficient data solutions that empower data-driven decision-making.<br><br>
+I work in agile environments, consistently delivering value in projects involving advanced analytics, automation, and modern data architecture.">
+    Soy Ingeniero de Datos con sólida experiencia en el diseño, desarrollo y mantenimiento de pipelines de datos escalables y automatizados.
+  </p>
+</section>
+
+
 
     <section id="projects">
-        <h2>📊 Proyectos Destacados</h2>
-        <div class="projects-row">
-            <div class="project-card">
-                <h3>Análisis Financiero</h3>
-                <p>Comparación de retornos frente al S&P 500 con visualizaciones y estadísticas.</p>
-                <a href="https://colab.research.google.com/drive/1Usl2lxoL9uQM15AYWK8_f7GrFNQpL_19" target="_blank">Ver Proyecto</a>
+        <h2 class="lang" data-es="📊 Proyectos Destacados" data-en="📊 Featured Projects">📊 Proyectos Destacados</h2>
+        <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🏗️</div>
+                    <h3 class="project-title" data-es="🤖 Automatización de Procesos Repetitivos con RPA" data-en="🤖 Automation of Repetitive Tasks with RPA">🤖 Automatización de Procesos Repetitivos con RPA</h3>
+                    <p class="project-description" 
+                    data-es="Desarrollo de robots RPA para automatizar tareas administrativas como la generación de reportes, envío de correos y actualización de sistemas. Reducción del tiempo operativo en un 80% y mejora en la precisión de los procesos." 
+                    data-en="Development of RPA bots to automate administrative tasks such as report generation, email dispatch, and system updates. Achieved 80% reduction in operational time and improved process accuracy.">
+                    🤖 Desarrollo de robots RPA para automatizar tareas administrativas como la generación de reportes, envío de correos y actualización de sistemas. Reducción del tiempo operativo en un 80% y mejora en la precisión de los procesos.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">UiPath / Power Automate |</span>
+                        <span class="tech-tag">Python (pyautogui, selenium, openpyxl) |</span>
+                        <span class="tech-tag">SQL Server / MySQL |</span>
+                        <span class="tech-tag">Docker |</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🪄</div>
+                    <h3 class="project-title" data-es="🕸️ Web Scraping de Portales Públicos y Comerciales" data-en="🕸️ Web Scraping from Public and Commercial Portals">🕸️ Web Scraping de Portales Públicos y Comerciales</h3>
+                    <p class="project-description" 
+                    data-es="Implementación de scrapers robustos en Python para extraer información estructurada de sitios web institucionales y comerciales, integrando los datos en dashboards automatizados para monitoreo en tiempo real." 
+                    data-en="Implementation of robust Python scrapers to extract structured information from institutional and commercial websites, integrating the data into automated dashboards for real-time monitoring.">
+                    🕸️ Implementación de scrapers robustos en Python para extraer información estructurada de sitios web institucionales y comerciales, integrando los datos en dashboards automatizados para monitoreo en tiempo real.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">BeautifulSoup |</span>
+                        <span class="tech-tag">Selenium |</span>
+                        <span class="tech-tag">Scrapy |</span>
+                        <span class="tech-tag">Python |</span>
+                        <span class="tech-tag">Pandas |</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🙊</div>
+                    <h3 class="project-title" data-es="🔐 Sistema de Gestión de Usuarios y Autenticación Segura" data-en="🔐 User Management and Secure Authentication System">🔐 Sistema de Gestión de Usuarios y Autenticación Segura</h3>
+                    <p class="project-description" 
+                    data-es="Diseño de un sistema completo de gestión de usuarios con roles, autenticación segura (JWT y OAuth2) y control de accesos. Implementado en una aplicación web interna para garantizar la protección de datos sensibles." 
+                    data-en="Design of a full user management system with roles, secure authentication (JWT and OAuth2), and access control. Implemented in an internal web app to ensure sensitive data protection.">
+                    🔐 Diseño de un sistema completo de gestión de usuarios con roles, autenticación segura (JWT y OAuth2) y control de accesos. Implementado en una aplicación web interna para garantizar la protección de datos sensibles.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Python Django o Flask |</span>
+                        <span class="tech-tag">MySQL o PostgreSQL |</span>
+                        <span class="tech-tag">HTML + CSS + JS (Vanilla) |</span>
+                        <span class="tech-tag">Bootstrap o Tailwind CSS |</span>
+                        <span class="tech-tag">BigQuery |</span>
+                        <span class="tech-tag">Terraform |</span>
+                    </div>
+                </div>
+                                <div class="project-card">
+                    <div class="project-icon">🧼</div>
+                    <h3 class="project-title" data-es="🧹 Limpieza y Enriquecimiento de Datos Masivos" data-en="🧹 Massive Data Cleaning and Enrichment">🧹 Limpieza y Enriquecimiento de Datos Masivos</h3>
+                    <p class="project-description" 
+                    data-es="Diseño e implementación de un proceso automatizado de limpieza, transformación y enriquecimiento de más de 500 millones de registros provenientes de múltiples fuentes heterogéneas. Reducción del 98% en errores de calidad de datos." 
+                    data-en="Design and implementation of an automated process for cleaning, transforming, and enriching over 500 million records from multiple heterogeneous sources. Achieved a 98% reduction in data quality issues.">
+                    🧹 Diseño e implementación de un proceso automatizado de limpieza, transformación y enriquecimiento de más de 500 millones de registros provenientes de múltiples fuentes heterogéneas. Reducción del 98% en errores de calidad de datos.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">pandas |</span>
+                        <span class="tech-tag">numpy |</span>
+                        <span class="tech-tag">pyjanitor |</span>
+                        <span class="tech-tag">GCP |</span>
+                        <span class="tech-tag">fuzzywuzzy |</span>
+                        <span class="tech-tag">Google BigQuery / Snowflake |</span>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Pipeline ETL Cloud</h3>
-                <p>Automatización de carga desde CSV a Snowflake usando Airflow y AWS.</p>
-                <a href="#" target="_blank">Repositorio privado</a>
-            </div>
-            <div class="project-card">
-                <h3>Dashboard KPIs</h3>
-                <p>Indicadores clave con Power BI desde múltiples fuentes automatizadas.</p>
-                <a href="#" target="_blank">Demo disponible</a>
-            </div>
-        </div>
     </section>
 
     <section id="skills">
-        <h2>🧠 Habilidades Clave</h2>
-        <div class="skills-grid">
-            <span>SQL Avanzado</span><span>Python</span><span>Apache Airflow</span>
-            <span>ETL/ELT Pipelines</span><span>Docker</span><span>Data Warehousing</span>
-            <span>AWS / GCP</span><span>Snowflake / BigQuery</span>
-            <span>Git / CI-CD</span><span>Power BI / Tableau</span>
-        </div>
+        <h2 class="lang" data-es="🧠 Habilidades Clave" data-en="🧠 Key Skills">🧠 Habilidades Clave</h2>
+            <div class="skills-highlight">
+                        <span class="skill-tag">Big Data</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Cloud Computing</span>
+                        <span class="skill-tag">ETL/ELT</span>
+                        <span class="skill-tag">Data Warehousing</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Real-time Processing</span>
+                        <span class="skill-tag">RPA RPD</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">POWER BI</span>
+                        <span class="skill-tag">Tableau</span>
+    </div>
     </section>
+    
+    <a href="https://wa.me/573185503288" class="whatsapp-btn" target="_blank">
+        💬
+    </a>
+
+    
 
     <footer id="contacto">
-        <h2>📫 Contacto</h2>
+
+        <div class="footer-section">
+                    <h2 class="lang" data-es="📫 Contacto" data-en="📫 Contact">📫 Contacto</h2>
+                    <div class="contact-info">
+                        <p>📧 yanzes01@gmail.com</p>
+                        <p>📱 +57 318 550 3288</p>
+                    </div>
+                
+
+        
         <ul class="contact-list">
-            <li><strong>Email:</strong> yanzes@example.com</li>
+            
             <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yanzesdevdata" target="_blank">linkedin.com/in/yanzesdevdata</a></li>
             <li><strong>GitHub:</strong> <a href="https://github.com/yanzes" target="_blank">github.com/yanzes</a></li>
         </ul>

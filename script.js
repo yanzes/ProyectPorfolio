@@ -1,29 +1,36 @@
-// Animación: Fade-in al hacer scroll
-document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('section');
+document.addEventListener('DOMContentLoaded', () => {
+    const switcher = document.getElementById('lang-switch');
+    const texts = document.querySelectorAll('[data-es][data-en]');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
+    function updateLanguage(lang) {
+        texts.forEach(el => {
+            const text = el.getAttribute('data-' + lang);
+            if (text) el.innerHTML = text;
         });
-    }, {
-        threshold: 0.2
+    }
+
+    switcher.addEventListener('change', (e) => {
+        const lang = e.target.checked ? 'en' : 'es';
+        updateLanguage(lang);
     });
 
-    sections.forEach(section => {
-        section.classList.add('hidden');
-        observer.observe(section);
-    });
-});
+    // Idioma por defecto: español
+    updateLanguage('es');
+})
+el.innerHTML = el.dataset[lang];
 
-// Smooth scroll en el menú
-document.querySelectorAll('#navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const section = document.querySelector(this.getAttribute('href'));
-        section.scrollIntoView({ behavior: 'smooth' });
+const langSwitch = document.getElementById('lang-switch');
+  const themeSwitch = document.getElementById('theme-switch');
+
+  // Cambia idioma
+  langSwitch.addEventListener('change', () => {
+    const lang = langSwitch.checked ? 'en' : 'es';
+    document.querySelectorAll('[data-en], [data-es]').forEach(el => {
+      el.textContent = el.dataset[lang];
     });
-});
+  });
+
+  // Cambia modo claro/oscuro
+  themeSwitch.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode', themeSwitch.checked);
+  });
