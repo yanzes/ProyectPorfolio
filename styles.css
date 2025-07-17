@@ -130,8 +130,8 @@ body {
     flex-wrap: wrap;
 }
 .profile-pic {
-    width: 210px;
-    height: 210px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     border: 3px solid #fff;
     object-fit: cover;
@@ -269,50 +269,49 @@ footer a {
     text-decoration: none;
 }
 
+.footer-images {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.circulo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+  cursor: pointer;
+}
+
+.circulo-img:hover {
+  transform: scale(1.15) translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,.35);
+}
+
 /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 28px;
-            text-decoration: none;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            animation: pulse 2s infinite;
-        }
+.whatsapp-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 75px;
+  height: 75px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 38px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  animation: pulse 2s infinite;
+}
 
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
-        }
-
-
-    .footer-images {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .circulo-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,.25);
-      transition: transform .25s ease, box-shadow .25s ease;
-      cursor: pointer;
-    }
-
-    .circulo-img:hover {
-      transform: scale(1.15) translateY(-4px);
-      box-shadow: 0 6px 12px rgba(0,0,0,.35);
-    }
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+}
