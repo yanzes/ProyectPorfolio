@@ -24,3 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Idioma por defecto: español
     updateLanguage('es');
 });
+  window.addEventListener('load', ()=>{
+    document.getElementById('chat').style.display = 'block';
+});
